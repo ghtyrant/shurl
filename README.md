@@ -4,9 +4,9 @@ Shurl is a minimal URL shortener service using Python and web.py. URLs are store
 
 Requirements
 ------------
-Python (>= 2.7, may work on older versions)
-web.py (>= 0.37, may work on older versions)
-MySQLdb/psycopg2/whatever (depends on the db backend you choose)
+* Python (>= 2.7, may work on older versions)
+* web.py (>= 0.37, may work on older versions)
+* MySQLdb/psycopg2/whatever (depends on the db backend you choose)
 
 
 Installation
