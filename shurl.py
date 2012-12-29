@@ -41,12 +41,15 @@ class NewUrl:
       res = DB.where('url', short=short)
 
     DB.insert('url', url=url, short=short)
-    web.header('Content-Type', 'text/plain')
     return BASE_URL + short
 
   def POST(self):
     data = web.input()
     url_parsed = urlparse.urlparse(data.url)
+    
+    # set correct content-type
+    web.header('Content-Type', 'text/plain')
+
     if url_parsed.scheme not in ['http', 'https']:
       return "error"
 
