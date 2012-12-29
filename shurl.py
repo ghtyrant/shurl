@@ -64,3 +64,6 @@ class Resolve:
 if __name__ == "__main__":
   app = web.application(URLS, globals())
   app.run()
+else:
+  app = web.application(URLS, globals(), autoreload=False)
+  application = app.wsgifunc()
